@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Server</title>
+    <link rel="stylesheet" href="css/suchicustom.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/suchibanner.css">
+    <script src="javascript/suchijs.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <img class="navbar-brand" src="images/logo.svg" alt="logo image">
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-fw fa-wrench"></i>Project1
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="internethistory.html">The Internet</a></li>
+                            <li><a href="webserver.html"><b>Web Server</b></a></li>
+                            <li><a href="ipanddns.html">IP Address and DNS</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown, active">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-fw fa-wrench"></i>Project2
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">1. Glossary of OOP terms with definitions</a></li>
+                            <li><a href="">2. AAA testing with Python</a></li>
+                            <li><a href=""><b>3. Calculator and principles of OOP</b></a></li>
+                            <li><a href="">4(a). Calculator and SOLID Object Oriented Design</a></li>
+                            <li><a href="">4(b). Calculator and Design Patterns Used in the project</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html"><i class="fa fa-fw fa-user"></i>About</a></li>
+                    <li><a href="contactus.html"><i class="fa fa-fw fa-envelope"></i>Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Navbar -->
+
+        <!-- Background image -->
+
+        <!-- Background image -->
+
+    </header>
+    <div class="container-fluid text-center">
+
+
+        <div class="row content">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href=""><b>Calculator and principles of OOP</b></a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-sm-2 sidenav">
+                <p><a href="">1. Glossary of OOP terms with definitions</a></p>
+                <p><a href="">2. AAA testing with Python</a></p>
+                <p><a href=""><b>3. Calculator and principles of OOP</b></a></p>
+                <p><a href="">4(a). Calculator and SOLID Object Oriented Design</a></p>
+                <p><a href="">4(b). Calculator and Design Patterns Used in the project</a></p>
+                <hr class="black">
+                <!--<p><a class="btn btn-first" href="webserver.html" download>Send PDF</a></p>-->
+
+
+            </div>
+            <div class="col-sm-8 text-left">
+
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Abstraction in calculator</a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p class="grw-font">Python file reference : result.py and addition.py</p>
+                                <p class="grw-font">
+                                    <ul>
+                                <li><b>Result(ABC)</b> class is the abstract class with one abstract method get_output(self)</li>
+                                <li>To define the abstract method used the <b>@abstractmethod</b> from <b>ABC-Abstract Base Class</b></li>
+                                        <li>Implementation classes such as Addition, Subtraction etc providing their own implementation for the
+                                            abstract method</li>
+
+                                    </ul>
+                                </p>
+                                <p class="grw-font">Example</p>
+                                <p class="grw-font">
+                                <ul style="list-style-type:none;">
+
+                                <li>"""Abstract class"""</li>
+                                <li>from abc import abstractmethod, ABC</li>
+                                <br>
+
+                                <li>class <b>Result(ABC)</b>:</li>
+                                <li>"""result for all the operations"""</li>
+                                <br>
+                                <li># pylint: disable=too-few-public-methods</li>
+                                <li><b>@abstractmethod</b></li>
+                                <li>def <b>get_output(self)</b>:</li>
+                                <li>"""this is the abstract method to be implemented by impl classes"""</li>
+                                <br>
+                                <li>"""Class for Addition Operation"""</li>
+                                <li>from calc.calculations.operation import Operation</li>
+                                <li>from calc.calculations.result import Result</li>
+                                <br>
+
+                                <li>class <b>Addition</b>(Operation, <b>Result)</b>:</li>
+                                <li>"""subclass Addition extending base Operation"""</li>
+                                <br>
+                                <li>def <b>get_output(self)</b>:</li>
+                                <li>"""Adds the elements in tuple"""</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;sum_of_elements = 0.0</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;for value in self.values:</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum_of_elements = sum_of_elements + value</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;return sum_of_elements</li>
+
+                            </ul>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Object</a>
+                            </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <img width="400" src="images/webserverimage.jpg" alt="web server image">
+                            </div>
+                            <div class="panel-body">
+                                <p class="grw-font"></p>
+                                <p class="grw-font">
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Instantiation</a>
+                            </h4>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p class="grw-font"></p>
+                                <p class="grw-font"></p>
+                                <p class="grw-font"></p>
+                                <p class="grw-font">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Factory</a>
+                            </h4>
+                        </div>
+                        <div id="collapse4" class="panel-collapse collapse">
+                            <div class="panel-body"><p class="grw-font">Factory</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Constructor</a>
+                            </h4>
+                        </div>
+                        <div id="collapse5" class="panel-collapse collapse">
+                            <div class="panel-body"><p class="grw-font">Constructor</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">TypeCast</a>
+                            </h4>
+                        </div>
+                        <div id="collapse12" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <p class="grw-font">static</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="col-sm-2 sidenav">
+                    <div class="text-center">
+                        <img class="img-fluid" height="120" width="120" src=""
+                             alt="image of TBL">
+                        <p class="left">write
+                        </p>
+
+                        <p class="left">write
+                        </p>
+                    </div>
+                </div> <!-- closed col-sm-2 sidenav -->
+            </div>
+
+        </div>
+
+        <footer class="text-center text-lg-start bg-light text-muted">
+            <!-- Section: Social media -->
+            <div>
+                SuchiKhare &#169;
+            </div>
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <div>
+                <a href="https://www.facebook.com" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/SuchiKhare/IS601Project1" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
