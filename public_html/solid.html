@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Cal and OOPs</title>
+    <title>SOLID</title>
     <link rel="stylesheet" href="css/suchicustom.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
@@ -45,8 +45,8 @@
                         <ul class="dropdown-menu">
                             <li><a href="">1. Glossary of OOP terms with definitions</a></li>
                             <li><a href="">2. AAA testing with Python</a></li>
-                            <li><a href=""><b>3. Calculator and principles of OOP</b></a></li>
-                            <li><a href="">4(a). Calculator and SOLID Object Oriented Design</a></li>
+                            <li><a href="">3. Calculator and principles of OOP</a></li>
+                            <li><a href=""><b>4(a). Calculator and SOLID Object Oriented Design</b></a></li>
                             <li><a href="">4(b). Calculator and Design Patterns Used in the project</a></li>
                         </ul>
                     </li>
@@ -71,15 +71,15 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href=""><b>Calculator and principles of OOP</b></a></li>
+                        <li class="breadcrumb-item"><a href=""><b>Calculator and SOLID</b></a></li>
                     </ol>
                 </nav>
             </div>
             <div class="col-sm-2 sidenav">
-                <p><a href="basicoops.html">1. Glossary of OOP terms with definitions</a></p>
-                <p><a href="aaatesting.html">2. AAA testing with Python</a></p>
-                <p><a href="caloops.html"><b>3. Calculator and principles of OOP</b></a></p>
-                <p><a href="solid.html">4(a). Calculator and SOLID Object Oriented Design</a></p>
+                <p><a href="aaatesting.html">1. Glossary of OOP terms with definitions</a></p>
+                <p><a href="basicoops.html">2. AAA testing with Python</a></p>
+                <p><a href="caloops.html">3. Calculator and principles of OOP</a></p>
+                <p><a href="solid.html"><b>4(a). Calculator and SOLID Object Oriented Design</b></a></p>
                 <p><a href="designpatterns.html">4(b). Calculator and Design Patterns Used in the project</a></p>
                 <hr class="black">
                 <!--<p><a class="btn btn-first" href="webserver.html" download>Send PDF</a></p>-->
@@ -92,76 +92,56 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Abstraction in
-                                    calculator</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">What is SOLID</a>
                             </h4>
                         </div>
                         <div id="collapse1" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p class="grw-font">Python file reference : result.py and addition.py</p>
                                 <p class="grw-font">
                                 <ul>
-                                    <li><b>Result(ABC)</b> class is the abstract class with one abstract method
-                                        get_output(self)
+                                    <li>In software engineering, SOLID is a mnemonic acronym for five design principles
+                                        intended to make software designs more understandable,
+                                        flexible, and maintainable.
                                     </li>
-                                    <li>To define the abstract method used the <b>@abstractmethod</b> from <b>ABC-Abstract
-                                        Base Class</b></li>
-                                    <li>Implementation classes such as Addition, Subtraction etc providing their own
-                                        implementation for the
-                                        abstract method
+                                    <li>The principles are a subset of many principles promoted by American software
+                                        engineer and instructor Robert C. Martin
                                     </li>
-
+                                    <li> The SOLID concepts are</li>
                                 </ul>
                                 </p>
-                                <p class="grw-font">Example</p>
                                 <p class="grw-font">
-                                <ul style="list-style-type:none;">
+                                <ol>
+                                <li><b>The Single-responsibility principle:</b></li>
+                                    There should never be more than one reason for a class to change.
+                                    In other words, every class should have only one responsibility.
+                                    <br>
+                                    <li><b>The Open–closed principle:</b></li>
+                                    Software entities should be open for extension, but closed for modification.
+                                    <br>
+                                    <li><b>The Liskov substitution principle:</b></li>
+                                    Functions that use pointers or references to base classes must be able to use
+                                    objects of derived classes without knowing it.
+                                    See also design by contract.
+                                    <br>
+                                    <li><b>The Interface segregation principle:</b></li>
+                                        "Many client-specific interfaces are better than one general-purpose interface.
 
-                                    <li>"""Abstract class"""</li>
-                                    <li>from abc import abstractmethod, ABC</li>
                                     <br>
+                                    <li><b>The Dependency inversion principle:</b></li>
+                                    Depend upon abstractions, not upon concretions.
 
-                                    <li>class <b>Result(ABC)</b>:</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""result for all the operations"""</li>
-                                    <br>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint: disable=too-few-public-methods</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<b>@abstractmethod</b></li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def <b>get_output(self)</b>:</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""this is the abstract method
-                                        to be implemented by impl classes"""
-                                    </li>
-                                    <br>
-                                    <li>"""Class for Addition Operation"""</li>
-                                    <li>from calc.calculations.operation import Operation</li>
-                                    <li>from calc.calculations.result import Result</li>
-                                    <br>
-
-                                    <li>class <b>Addition</b>(Operation, <b>Result)</b>:</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""subclass Addition extending base Operation"""</li>
-                                    <br>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def <b>get_output(self)</b>:</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""Adds the elements in
-                                        tuple"""
-                                    </li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum_of_elements = 0.0</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for value in self._values:</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum_of_elements
-                                        =
-                                        sum_of_elements + value
-                                    </li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return sum_of_elements</li>
-
+                                </ol>
+                                </p>
                                 </ul>
                                 </p>
-
                             </div>
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Encapsulation in
-                                    calculator</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Single-responsibility
+                                    principle</a>
                             </h4>
                         </div>
                         <div id="collapse2" class="panel-collapse collapse">
@@ -170,10 +150,12 @@
                                 <p class="grw-font">
                                 <ul>
                                     <li>Basically all classes are example of an encapsulation as it encapsulates all the
-                                        data that is member functions, variables.
+                                        data that is member functions, variables etc BUT in this particular calculator
+                                        example.
                                     </li>
                                     <li>Subclass - Addition, Subtraction, Multiplication , Division etc encapsulates the
-                                        data and data is present in the base class(Operation)
+                                        data
+                                        and data is present in the base class(Operation)
                                     </li>
                                 </ul>
                                 </p>
@@ -211,8 +193,8 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Inheritance in
-                                    calculator</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"> Open–closed
+                                    principle</a>
                             </h4>
                         </div>
                         <div id="collapse3" class="panel-collapse collapse">
@@ -268,8 +250,8 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Polymorphism in
-                                    calculator</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Liskov substitution
+                                    principle</a>
                             </h4>
                         </div>
                         <div id="collapse4" class="panel-collapse collapse">
@@ -345,7 +327,8 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Class</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Interface
+                                    segregation principle:</a>
                             </h4>
                         </div>
                         <div id="collapse5" class="panel-collapse collapse">
@@ -376,246 +359,57 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Object</a>
-                            </h4>
-                        </div>
-                        <div id="collapse6" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <p class="grw-font">Python file reference : calculation.py</p>
-                                <p class="grw-font">
-                                <ul>
-                                    <li>class is Calculations and method for example is add_addition_calculation(values)
-                                    </li>
-                                    <li>Example below the addition is an object</li>
-                                    <li>different ways to create object :</li>
-                                </ul>
-                                </p>
-                                <p class="grw-font">
-                                <ul style="list-style-type:none;">
-                                    <li>addition = Addition(values)</li>
-                                    <li>addition = Addition.create_operation(values)</li>
-                                    <li>Please note - factory method for instantiation teh class or creating teh object
-                                        is discussed in Factory section
-                                    </li>
-                                </ul>
-                                </p>
-                                <p class="grw-font">Example</p>
-                                <p class="grw-font">
-                                <ul style="list-style-type:none;">
-                                    <li>def add_addition_calculation(values):</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""Add addition object to history"""</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<b>addition = Addition.create_operation(values)</b></li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.add_calculation(addition)</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# Get the result of the calculation</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;return True</li>
-                                </ul>
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Instantiating</a>
-                            </h4>
-                        </div>
-                        <div id="collapse7" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <p class="grw-font">Python file reference : calculation.py</p>
-                                <p class="grw-font">
-                                <ul>
-                                    <li>class is Calculations and method for example is add_addition_calculation(values)
-                                    </li>
-                                    <li>different ways to create object/instantiate the class :</li>
-                                    <li>Addition class is instantiated , addition is an object, we can have multiple
-                                        instances
-                                    </li>
-                                </ul>
-                                </p>
-                                <p class="grw-font">
-                                <ul style="list-style-type:none;">
-                                    <li>addition = Addition(values)</li>
-                                    <li>addition = Addition.create_operation(values)</li>
-                                    <li>Please note - factory method for instantiation teh class or creating teh object
-                                        is discussed in Factory section
-                                    </li>
-                                </ul>
-                                </p>
-                                <p class="grw-font">Example</p>
-                                <p class="grw-font">
-                                <ul style="list-style-type:none;">
-                                    <li>def add_addition_calculation(values):</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""Add addition object to history"""</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<b>addition = Addition.create_operation(values)</b></li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.add_calculation(addition)</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# Get the result of the calculation</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;return True</li>
-                                </ul>
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">Constructor</a>
-                            </h4>
-                        </div>
-                        <div id="collapse8" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <p class="grw-font">Python file reference : operation.py</p>
-                                <p class="grw-font">
-                                <ul>
-                                    <li>class is Operation and method for example is <b>__init__(self, values:
-                                        tuple)</b>
-                                    </li>
-                                    <li>This is the <b>parameterized constructor</b> as first argument as a reference to
-                                        the instance being constructed known as self and
-                                        second parameter is provided by us ie values :tuple
-                                    </li>
-                                    <li>This is constructor is taking the values which is tuple and converting all the
-                                        elements inside tuple to float by calling a class method
-                                        convert_cal_input_to_float(values)
-                                    </li>
-                                </ul>
-                                </p>
-                                <p class="grw-font">Example</p>
-                                <p class="grw-font">
-                                <ul style="list-style-type:none;">
-                                    <li># The __init__ method is a constructor and runs as soon as an</li>
-                                    <li># object of a Operation class is instantiated.</li>
-                                    <li>def __init__(self, values: tuple):</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""Parameterized Constructor convert to generic input
-                                        parameters to float"""
-                                    </li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# instance attribute values of type tuple and is
-                                        protected
-                                    </li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;self._values =
-                                        Operation.convert_cal_input_to_float(values)
-                                    </li>
-                                </ul>
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">Instance methods</a>
-                            </h4>
-                        </div>
-                        <div id="collapse9" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <p class="grw-font">Python file reference : addition.py</p>
-                                <p class="grw-font">
-                                <ul>
-                                <li>class Addition, Subtraction, Multiplication, Division has the <b>instance method</b> named get_output(self)</li>
-                                </ul>
-                                </p>
-                                <p class="grw-font">Example</p>
-                                <p class="grw-font">
-                                <ul style="list-style-type:none;">
-                                <li>"""Class for Addition Operation"""</li>
-                                <li>from calc.calculations.operation import Operation</li>
-                                <li>from calc.calculations.result import Result</li>
-
-
-                                <li>class <b>Addition(Operation, Result)</b>:</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;"""subclass Addition extending base Operation"""</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;def <b>get_output(self)</b>:</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""get_output(self) is the instance method and Adds the elements in tuple"""</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum_of_elements = 0.0</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for value in self._values:</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum_of_elements = sum_of_elements + value</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return sum_of_elements</li>
-                                </ul>
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">Class methods</a>
-                            </h4>
-                        </div>
-                        <div id="collapse10" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <p class="grw-font">Python file reference : operation.py</p>
-                                <p class="grw-font">
-                                <ul>
-                                    <li>class Operation has the <b>class method</b> named create_operation</li>
-                                </ul>
-                                </p>
-                                <p class="grw-font">Example</p>
-                                <p class="grw-font">
-                                <ul style="list-style-type:none;">
-                                <li><b>@classmethod</b></li>
-                                <li>def <b>create_operation(cls, values: tuple)</b>:</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;"""design pattern - factory to create the instance at one place"""</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;# cls keyword (ideal name) : we can only access the members of the class</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return cls(values)</li>
-                                </ul>
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">Static methods</a>
-                            </h4>
-                        </div>
-                        <div id="collapse11" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <p class="grw-font">Python file reference : calculations.py</p>
-                                <p class="grw-font">
-                                <ul>
-                                    <li>class Calculations has the <b>static method</b> named clear_history()</li>
-                                </ul>
-                                </p>
-                                <p class="grw-font">Example</p>
-                                <p class="grw-font">
-                                <ul style="list-style-type:none;">
-                                <li># pylint: disable=too-few-public-methods</li>
-                                <li>@staticmethod</li>
-                                <li>def clear_history():</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;"""clear the history of calculations"""</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.history.clear()</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;return True</li>
-                                </ul>
-                                </p>
-                                <p class="grw-font">
-                                <ul style="list-style-type:none;">
-                                    Driver
-                                    <li># static method clear_history is called directly using the class Calculations not on the object</li>
-                                    <li>Calculations.clear_history()</li>
-                                </ul>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">Calculator flow from the test file</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">Dependency
+                                    inversion principle</a>
                             </h4>
                         </div>
                         <div id="collapse12" class="panel-collapse collapse in">
                             <div class="panel-body">
-                                <p class="grw-font">Please note that this section is particularly  used for in-person presentation on
-                                cal2 part5_scratch implementation.Please ignore this below link (quickcal.html) for page consistency wrt web site developments
-
+                                <p class="grw-font">Python file reference : operation.py and addition.py</p>
+                                <p class="grw-font">
+                                <ul>
+                                    <li>Basically all classes are example of an encapsulation as it encapsulates all the
+                                        data that is member functions, variables etc BUT in this particular calculator
+                                        example.
+                                    </li>
+                                    <li>Subclass - Addition, Subtraction, Multiplication , Division etc encapsulates the
+                                        data
+                                        and data is present in the base class(Operation)
+                                    </li>
+                                </ul>
                                 </p>
+                                <p class="grw-font">Example</p>
+                                <p class="grw-font">
+                                <ul style="list-style-type:none;">
+                                    <li>class <b>Operation:</b></li>
+                                    <li>"""Base class"""</li>
+                                    <br>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, values: tuple):</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.<b>_values</b> =
+                                        Operation.convert_cal_input_to_float(values)
+                                    </li>
+                                    <br>
+                                    <li>class <b>Addition(Operation, Result)</b>:</li>
+                                    <li>"""subclass Addition extending base Operation"""</li>
+                                    <br>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def get_output(self):</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""Adds the elements in tuple"""
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum_of_elements = 0.0</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for value in <b>self._values</b>:
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum_of_elements
+                                        = sum_of_elements + value
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return sum_of_elements</li>
+
+                                </ul>
+                                </p>
+
                             </div>
                         </div>
                     </div>
