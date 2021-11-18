@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Basic OOPS</title>
@@ -30,24 +30,19 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-fw fa-wrench"></i>Project1
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="internethistory.html">The Internet</a></li>
-                            <li><a href="webserver.html"><b>Web Server</b></a></li>
-                            <li><a href="ipanddns.html">IP Address and DNS</a></li>
-                        </ul>
-                    </li>
                     <li class="dropdown, active">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-fw fa-wrench"></i>Project2
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-fw fa-wrench"></i>Menu(
+                            Project1 and Project2)
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href=""><b>1. Glossary of OOP terms with definitions</b></a></li>
-                            <li><a href="">2. AAA testing with Python</a></li>
-                            <li><a href="">3. Calculator and principles of OOP</a></li>
-                            <li><a href="">4(a). Calculator and SOLID Object Oriented Design</a></li>
-                            <li><a href="">4(b). Calculator and Design Patterns Used in the project</a></li>
+                            <li><a href="internethistory.html">P1:The Internet</a></li>
+                            <li><a href="webserver.html">P1:Web Server</a></li>
+                            <li><a href="ipanddns.html">P1:IP Address and DNS</a></li>
+                            <li><a href="pylintfile.html">P2:pylint</a></li>
+                            <li><a href="basicoops.html"><b>P2:Glossary of OOP terms with definitions</b></a></li>
+                            <li><a href="caloops.html">P2:Calculator and principles of OOP</a></li>
+                            <li><a href="aaatesting.html">P2:AAA testing with Python</a></li>
+                            <li><a href="solid.html">P2:Calculator and SOLID Object Oriented Design</a></li>
                         </ul>
                     </li>
                     <li><a href="about.html"><i class="fa fa-fw fa-user"></i>About</a></li>
@@ -76,11 +71,15 @@
                 </nav>
             </div>
             <div class="col-sm-2 sidenav">
-                <p><a href="basicoops.html"><b>1. Glossary of OOP terms with definitions</b></a></p>
-                <p><a href="aaatesting.html">2. AAA testing with Python</a></p>
-                <p><a href="caloops.html">3. Calculator and principles of OOP</a></p>
-                <p><a href="caloops.html">4(a). Calculator and SOLID Object Oriented Design</a></p>
-                <p><a href="designpatterns.html">4(b). Calculator and Design Patterns Used in the project</a></p>
+                <p><a href="internethistory.html">P1:The Internet</a></p>
+                <p><a href="webserver.html">P1:Web Server</a></p>
+                <p><a href="ipanddns.html">P1:IP Address and DNS</a></p>
+                <p><a href="pylintfile.html">P2:pylint</a></p>
+                <p><a href="basicoops.html"><b>P2:Glossary of OOP terms with definitions</b></a></p>
+                <p><a href="caloops.html">P2:Calculator and principles of OOP</a></p>
+                <p><a href="aaatesting.html">P2:AAA testing with Python</a></p>
+                <p><a href="solid.html">P2:Calculator and SOLID Object Oriented Design</a></p>
+
                 <hr class="black">
                 <!--<p><a class="btn btn-first" href="webserver.html" download>Send PDF</a></p>-->
             </div>
@@ -189,12 +188,15 @@
                                         data that
                                         is member functions, variables etc.
                                     </li>
+                                    <br>
+                                    <li>in below , all the variables and functions are encapsulated.</li>
                                     <li><b>Private variable</b> -- an object’s variable can only be changed by an
                                         object’s method.
                                         this is to prevent accidental changes.The <b>double underscore __ </b>prefixed
                                         to a variable makes it private.
                                     </li>
-                                    <li>Public members (generally methods declared in a class) are accessible from
+                                    <li><b>Public members</b> (generally methods declared in a class) are accessible
+                                        from
                                         outside the class.
                                     </li>
                                     <li><b>Protected members</b> -- those members of the class that cannot be accessed
@@ -267,7 +269,6 @@
                         </div>
                         <div id="collapse3" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p class="grw-font">
                                 <p class="grw-font">What</p>
                                 <ul>
                                     <li>Inheritance is the capability of one class to derive or inherit the properties
@@ -718,7 +719,73 @@
                             </h4>
                         </div>
                         <div id="collapse13" class="panel-collapse collapse">
-                            <div class="panel-body"><p class="grw-font">fixture</p>
+                            <div class="panel-body"><p class="grw-font">
+                                <ul>
+                                    <li>pytest fixtures are functions attached to the tests which <b>run before the test
+                                        function is executed.</b>
+                                    </li>
+                                    <li>It provides a defined, reliable and consistent context for the tests.
+                                        This could include environment (for example a database configured with known
+                                        parameters) or
+                                        content (such as a dataset)
+                                    </li>
+                                    <li>Fixture errors:pytest does its best to put all the fixtures for a given test in
+                                        a linear order so that it can see which fixture happens first, second, third,
+                                        and so on. If an earlier fixture has a problem, though, and raises an exception,
+                                        pytest will stop executing fixtures for that test and mark the test as having an
+                                        error.
+
+                                        When a test is marked as having an error, it doesn’t mean the test failed,
+                                        though. It just means the test couldn’t even be attempted because one of the
+                                        things it depends on had a problem.
+                                    </li>
+                                    <li>If you want to make test data from files available to your tests, a good way to
+                                        do this is by loading these data in a fixture for use by your tests. This makes
+                                        use of the automatic caching mechanisms of pytest.
+
+                                        Another good approach is by adding the data files in the tests folder. There are
+                                        also community plugins available to help to manage this aspect of testing, e.g.
+                                        pytest-datadir and pytest-datafiles.
+                                    </li>
+                                    <li>particular function is a fixture by decorating it with <b>@pytest.fixture</b>
+                                    </li>
+                                    <br>
+                                    <li>In below example, there are two fixtures functions - my_fruit() and
+                                        fruit_basket(my_fruit).And in this case assert will return True</b></li>
+
+                                </ul>
+                                </p>
+                                <p class="grw-font">Example</p>
+                                <p>
+                                <ul style="list-style-type:none;">
+                                    <li>import pytest</li>
+                                    <br>
+                                    <li>class Fruit:</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, name):</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.name = name</li>
+                                    <br>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def __eq__(self, other):</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self.name == other.name
+                                    </li>
+                                    <br>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<b>@pytest.fixture</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def my_fruit():</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return Fruit("apple")</li>
+                                    <br>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<b>@pytest.fixture</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def fruit_basket(my_fruit):</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return [Fruit("banana"),
+                                        my_fruit]
+                                    </li>
+                                    <br>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def test_my_fruit_in_basket(<b>my_fruit,
+                                        fruit_basket</b>):
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assert my_fruit in
+                                        fruit_basket
+                                    </li>
+                                </ul>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -740,7 +807,49 @@
                             </h4>
                         </div>
                         <div id="collapse15" class="panel-collapse collapse">
-                            <div class="panel-body"><p class="grw-font">Constructor</p>
+                            <div class="panel-body">
+                                <p class="grw-font">
+                                <ul>
+                                    <li>Type hinting (<b>-></b>)is a formal solution to statically indicate the type of
+                                        a value within your Python code.
+                                        It was specified in PEP 484 and introduced in Python 3.5.
+                                    </li>
+                                    <li>Python is a <b>dynamically typed language</b>, which means you <b>never</b> have
+                                        to <b>explicitly indicate what kind of types variable has</b></li>
+                                    <li>But in some cases, dynamic typing can lead to some bugs that are very difficult
+                                        to debug and in those cases, <b>Type Hints or Static Typing</b> can be
+                                        convenient.
+                                    </li>
+                                    <br>
+                                    <li>This module provides runtime support for type hints. The most fundamental
+                                        support consists of the types Any, Union, Callable, TypeVar, and Generic
+                                    </li>
+                                    <br>
+                                    <li>In below example, if we pass an integer , works correctly</li>
+                                    <li>if we pass String, throws error</li>
+                                    <li>if we pass float, throws error</li>
+                                </ul>
+                                </p>
+                                <p class="grw-font">Example</p>
+                                <p>
+                                <ul style="list-style-type:none;">
+                                    <li># factorial function</li>
+                                    <li>def factorial(i: int) <b>-></b> int:</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;if i<0:</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return None</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;if i == 0:</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;return i * factorial(i-1)</li>
+
+                                    <li># passing a fraction to the function</li>
+                                    <li>print(factorial(5.01))</li>
+                                </ul>
+                                </p>
+                                <p class="grw-font">Still Issue with Type-Hint</p>
+                                <ul>
+                                    <li>(Type-Hint is completely ignored by the Python interpreter.) Install <b>mypy</b>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -752,7 +861,73 @@
                         </div>
                         <div id="collapse16" class="panel-collapse collapse in">
                             <div class="panel-body">
-                                <p class="grw-font">static</p>
+                                <p class="grw-font">
+                                <ul>
+                                    <li>Similar to concepts of down-casting and up-casting in Java</li>
+                                    <li>Type Casting is the method to convert the variable data type into a certain data
+                                        type in order to the operation required to be performed by users.
+                                    </li>
+                                    <li><b>type(x)</b></li>
+                                    <li>Implicit Type Casting - Python converts data type into another data type
+                                        automatically.
+                                    </li>
+                                    <li>Explicit Type Casting - Python need user involvement to convert the variable
+                                        data
+                                        type into certain data type in order to the operation required.
+                                    </li>
+                                </ul>
+                                </p>
+                                <p class="grw-font">Example of Implicit</p>
+                                <p>
+                                <ul style="list-style-type:none;">
+                                    <li># Python automatically converts</li>
+                                    <li># a to int</li>
+                                    <li>a = 7</li>
+                                    <li>print(type(a))</li>
+                                    <br>
+                                    <li> # Python automatically converts</li>
+                                    <li># b to float</li>
+                                    <li>b = 3.0</li>
+                                    <li>print(type(b))</li>
+                                    <br>
+                                    <li># Python automatically converts</li>
+                                    <li># c to float as it is a float addition</li>
+                                    <li> c = a + b</li>
+                                    <li>print(c)</li>
+                                    <li>print(type(c))</li>
+                                    <br>
+                                    <li># Python automatically converts</li>
+                                    <li># d to float as it is a float multiplication</li>
+                                    <li>d = a * b</li>
+                                    <li>print(d)</li>
+                                    <li>print(type(d))</li>
+                                    <br>
+                                    <li>Output</li>
+                                    <li><'int'></li>
+                                    <li><'float'></li>
+                                    <li>10.0</li>
+                                    <li>'float'></li>
+                                    <li>21.0</li>
+                                    <li><'float'></li>
+                                    </li>
+                                </ul>
+                                </p>
+                                <br>
+                                <p class="grw-font">Example of Explicit</p>
+                                <ul>
+                                    <li># int variable</li>
+                                    <li>a = 5</li>
+                                    <br>
+                                    <li># typecast to float</li>
+                                    <li>n = float(a)</li>
+                                    <br>
+                                    <li>print(n)</li>
+                                    <li>print(type(n))</li>
+                                    <br>
+                                    <li>Output</li>
+                                    <li>5.0</li>
+                                    <li><'float'></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -762,15 +937,19 @@
             </div>
             <div class="col-sm-2 sidenav">
                 <div class="text-center">
-                    <img class="img-fluid" height="120" width="120" src=""
-                         alt="">
-                    <p>write</p>
-                    <p class="left">write
-                    </p>
+                    <img class="img-fluid" height="180" width="180" src="images/OOPs-Concepts.jpg"
+                         alt="oops concept image">
+                    <p>OOPS concepts</p><br><br>
+                    <p class="left">Popular Object-Oriented Programming Languages</p>
 
-                    <p class="left">TBL ,who enabled a system to be able to view web pages, known as hypertext
-                        documents, through the
-                        Internet.
+                    <p class="left">
+                    <ul>
+                        <li> Java.</li>
+                        <li> Python.</li>
+                        <li> C++</li>
+                        <li> Ruby.</li>
+                        <li> C#</li>
+                    </ul>
                     </p>
                 </div>
             </div> <!-- closed col-sm-2 sidenav -->
