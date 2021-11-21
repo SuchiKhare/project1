@@ -184,6 +184,46 @@
                             </div>
                         </div>
                     </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Example of
+                                    exception test case in Calculator</a>
+                            </h4>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <ul style="list-style-type:none;">
+                                    <li>def test_divide_numbers(clear_history_fixture):</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""test division of numbers"""</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint: disable=unused-argument,redefined-outer-name
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<b># Arrange</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;my_numbers = (3.0, 1.0, 1.0)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<b># Act</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculator.divide_numbers(my_numbers)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<b># Assert</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;assert Calculations.get_first_calculation_result_value()
+                                        == "0.33"
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<b>with pytest.raises(ZeroDivisionError):</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;another_no = (1.0, 0.0) <b>#
+                                        Arrange</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Calculator.divide_numbers(another_no)
+                                        <b># Act</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assert
+                                        Calculations.get_last_calculation_result_value() == 1.0 <b># Assert</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# Below statement is not part of any coverage</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;assert
+                                        isinstance(Calculations.get_last_calculation_object(), Division)
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-2 sidenav">
