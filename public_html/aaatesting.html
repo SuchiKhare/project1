@@ -298,6 +298,98 @@
                             </div>
                         </div>
                     </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">How to use
+                                    external data for testing</a>
+                            </h4>
+                        </div>
+                        <div id="collapse12" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>In below example, there are three files in reference - readfile.py, readcsv.py
+                                        and readcsv_test.py
+                                    </li>
+                                    <li>CSV file Addition.csv is placed under cal2../tests/testdata/Addition.csv
+                                    </li>
+                                    <li>Base class ReadFile initializes the protected member (_path) through
+                                        parameterized constructor init
+                                    </li>
+                                    <li>Subclass ReadCSV extends the property and behaviour of the baseclass meaning the
+                                        _path and init constructor as well.
+                                    </li>
+                                    <li>Subclass has instance method read_csv_file which reads the csv on provided
+                                        location and assign to dataframe.
+                                    </li>
+                                    <li>test file uses the os package to play around with the path.The path is used as a
+                                        fixture using @pytest.mark.datafiles.this we can pass to any method we want to
+                                        have the file path or using @pytest.mark.datafiles we can define multiple files
+                                        also.
+                                    </li>
+                                </ul>
+
+                                <p class="grw-font">Example</p>
+                                <ul style="list-style-type:none;">
+                                    <li>"""Base class for reading file"""</li></ul>
+                                <br><ul style="list-style-type:none;">
+                                <li><b>class ReadFile:</b></li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;"""Read file"""</li></ul>
+                                <ul style="list-style-type:none;">
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# The __init__ method is a constructor and runs as soon
+                                        as an
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# object of a Operation class is instantiated.</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint: disable=too-few-public-methods</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def <b>__init__</b>(self, path: str):</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""Parameterized Constructor set
+                                        the path"""
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self._path = path</li>
+                                </ul><br>
+                                <br><ul style="list-style-type:none;">
+                                <li>"""Subclass Class for Reading CSV"""</li>
+                                <li>import pandas as pd</li>
+
+                                <li>from calc.file_utils.readfile import ReadFile</li>
+
+
+                                <li><b>class ReadCSV(ReadFile):</b></li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;"""subclass extending ReadFile to read csv"""</li>
+
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint: disable=too-few-public-methods</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;# This is the instance method</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;def <b>read_csv_file(self):</b></li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""reading csv file"""</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_frame =
+                                    pd.read_csv(self._path)
+                                </li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("data_frame : ",
+                                    data_frame[:])
+                                </li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return True</li></ul>
+                                <br>
+                                <br><ul style="list-style-type:none;">
+                                <li><b>"""Testing of Read CSV"""</b></li>
+                                <li>import os</li>
+                                <li>import pytest</li></ul>
+                                <br><ul style="list-style-type:none;">
+                                <li>from calc.file_utils.readcsv import ReadCSV</li></ul>
+                                <br><ul style="list-style-type:none;">
+                                <li>FIXTURE_DIR = os.path.join(</li>
+                                <li>
+                                    os.path.dirname(os.path.realpath('C://Users//SuchiK//PycharmProjects//calc2//')),
+                                </li>
+                                <li>'calc2//tests//test_data')</li>
+                                <li><b>@pytest.mark.datafiles(</b></li>
+                                <li><b>os.path.join(FIXTURE_DIR, 'addition.csv') )</b></li>
+                                <li>def <b>test_read_csv_file(datafiles):</b></li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;"""test read csv file"""</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;assert ReadCSV(datafiles).read_csv_file() is True</li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-2 sidenav">
