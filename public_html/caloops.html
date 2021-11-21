@@ -663,6 +663,108 @@
                             </div>
                         </div>
                     </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">Instance
+                                    methods</a>
+                            </h4>
+                        </div>
+                        <div id="collapse9" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Methods are functions defined inside the body of a class.They are used to define
+                                        the behaviors of an object.
+                                    </li>
+                                    <li>each instance have their own copy of the states/attributes and
+                                        behaviours/methods
+                                    </li>
+                                </ul>
+                                <br>
+                                <ul>
+                                    <li>below example : 2 methods - sing() and dance().
+                                        These are called <b>instance methods</b> because they are <b>called on an
+                                            instance object</b> i.e blu.
+                                    </li>
+                                </ul>
+                                <p class="grw-font">Python file reference : addition.py</p>
+                                <ul>
+                                    <li>class Addition, Subtraction, Multiplication, Division has the <b>instance
+                                        method</b> named get_output(self)
+                                    </li>
+                                </ul>
+                                <p class="grw-font">Example</p>
+                                <ul style="list-style-type:none;">
+                                    <li>"""Class for Addition Operation"""</li>
+                                    <li>from calc.calculations.operation import Operation</li>
+                                    <li>from calc.calculations.result import Result</li>
+
+
+                                    <li>class <b>Addition(Operation, Result)</b>:</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""subclass Addition extending base Operation"""</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def <b>get_output(self)</b>:</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""get_output(self) is the
+                                        instance method and Adds the elements in tuple"""
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum_of_elements = 0.0</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for value in self._values:</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum_of_elements
+                                        = sum_of_elements + value
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return sum_of_elements</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">Class methods</a>
+                            </h4>
+                        </div>
+                        <div id="collapse10" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>The @classmethod is a built-in function decorator that is an expression that
+                                        gets evaluated after your function is defined.
+                                    </li>
+                                    <li>A class method is a method that is <b>bound to the class and not the object</b>
+                                        of the class.
+                                    </li>
+                                    <li>They have the access to the state of the class as it <b>takes a class
+                                        parameter</b> that points to the class and not the object instance.
+                                    </li>
+                                    <li>It can modify a class state that would apply across all the instances of the
+                                        class. For example,
+                                        it can modify a class variable that will be applicable to all the instances.
+                                    </li>
+                                    <li>class method to create factory methods.</li>
+                                </ul>
+                                <br>
+                                <ul>
+                                    <li>below example : create_operation is the class method
+                                </ul>
+                                <p class="grw-font">Python file reference : operation.py</p>
+                                <ul>
+                                    <li>class Operation has the <b>class method</b> named create_operation</li>
+                                </ul>
+                                <p class="grw-font">Example</p>
+                                <ul style="list-style-type:none;">
+                                    <li><b>@classmethod</b></li>
+                                    <li>def <b>create_operation(cls, values: tuple)</b>:</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""design pattern - factory to create the instance at
+                                        one place"""
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# cls keyword (ideal name) : we can only access the
+                                        members of the class
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return cls(values)</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
