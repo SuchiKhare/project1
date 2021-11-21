@@ -296,7 +296,84 @@
                             </div>
                         </div>
                     </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Inheritance in
+                                    calculator</a>
+                            </h4>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p class="grw-font">What</p>
+                                <ul>
+                                    <li>Inheritance is the capability of one class to derive or inherit the properties
+                                        from another class.
+                                    </li>
+                                    <li>Person is the base/ super/ parent class.Employee is child/ subclass of Person
+                                        class.Employee inherits from Person.
+                                    </li>
+                                    <li>This means Employee is inheriting all the members (data and functions based on
+                                        accessibility) ie. __init__, getName, isEmployee.
+                                    </li>
+                                    <li>Employee class is overriding the behaviour of the parent class and has its own
+                                        behaviour by different implementation.
+                                    </li>
+                                </ul>
+                                <p class="grw-font">Why</p>
+                                <ul>
+                                    <li>Represents real-world relationships well.</li>
+                                    <li>Reusability of a code.</li>
+                                    <li>Transitive in nature.</li>
 
+                                </ul>
+                                <p class="grw-font">Python file reference : operation.py and addition.py,
+                                    subtraction.py, multiplication.py and division.py</p>
+                                <ul>
+                                    <li>Inheritance is the capability of one class to derive or inherit the properties
+                                        from another class.
+                                    </li>
+                                    <li>It provides re-usability of a code.</li>
+                                    <li>It is transitive</li>
+                                    <li>In calculator example - the child class such as Addition inherits all the
+                                        members (ex- values:tuple) of the Base class(Operation)
+                                    </li>
+                                </ul>
+
+                                <p class="grw-font">Example</p>
+                                <ul style="list-style-type:none;">
+                                    <li>class <b>Operation:</b></li>
+                                    <li>"""Base class"""</li>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, values: tuple):</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.<b>_values</b> =
+                                        Operation.convert_cal_input_to_float(values)
+                                    </li>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li>class <b>Addition(Operation, Result)</b>:</li>
+                                    <li>"""subclass Addition extending base Operation"""</li>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def get_output(self):</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""Adds the elements in
+                                        tuple"""
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum_of_elements = 0.0</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for value in <b>self._values</b>:
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum_of_elements
+                                        = sum_of_elements + value
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return sum_of_elements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
