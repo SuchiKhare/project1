@@ -141,7 +141,49 @@
                             </div>
                         </div>
                     </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Example in
+                                    Calculator</a>
+                            </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p class="grw-font">Python Reference file: calculator_test.py</p>
+                                <ul style="list-style-type:none;">
+                                    <li>def <b>test_add_numbers(clear_history_fixture)</b>:</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""test addition of numbers"""</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint: disable=unused-argument,redefined-outer-name
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# <b>Arrange</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;numbers = (10.0, 20.0, 30.0)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# <b>Act</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculator.add_numbers(numbers)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# <b>Assert</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;assert <b>Calculations.get_first_calculation_object().get_output()
+                                        == 60.0</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;assert
+                                        isinstance(Calculations.get_last_calculation_object(), Addition)
+                                    </li></ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li>calculator_test.py method test_add_numbers tests add_numbers method of the
+                                        Calculator (calculator.py)
+                                        in arrange - we initialize the tuple to be ued for testing.
+                                        in act - we invoke method to be tested i.e, add_numbers and pass the tuple to
+                                        it.
+                                        in assert - we check the behaviour if the condition of the test met or not met
+                                        to define the success of the test case
 
+                                    </li>
+                                </ul>
+
+
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-2 sidenav">
