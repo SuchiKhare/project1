@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>AAA Testing</title>
@@ -76,7 +76,7 @@
                 <p><a href="ipanddns.html">P1:IP Address and DNS</a></p>
                 <p><a href="pylintfile.html">P2:pylint</a></p>
                 <p><a href="basicoops.html">P2:Glossary of OOP terms with definitions</a></p>
-                <p><a href="caloops.html">P2:Calculator and principles of OOP</b></a></p>
+                <p><a href="caloops.html">P2:Calculator and principles of OOP</a></p>
                 <p><a href="aaatesting.html"><b>P2:AAA testing with Python</b></a></p>
                 <p><a href="solid.html">P2:Calculator and SOLID Object Oriented Design</a></p>
                 <hr class="black">
@@ -93,7 +93,6 @@
                         </div>
                         <div id="collapse1" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p class="grw-font">
                                 <ul>
                                     <li>The AAA pattern is a common <b>unit testing</b> pattern. It is a way to arrange
                                         and
@@ -107,9 +106,9 @@
                                     </li>
 
                                 </ul>
-                                </p>
+
                                 <p class="grw-font">What is Arrange, Act and Assert</p>
-                                <p class="grw-font">
+
                                 <ul style="list-style-type:none;">
                                     <li><b>ARRANGE </b>section you only have code required to setup that specific test.
                                         Here objects would be created, mocks setup (if you are using one) and
@@ -128,10 +127,9 @@
                                         as simple as checking numeric or string values. Other times, they may require
                                         checking multiple facets of a system. Assertions will ultimately determine if
                                         the test passes or fails.
-                                    </li>
+                            </li></ul>
                                     <br>
-                                    <br>
-                                    <li>Every major programming language has at least one test framework.
+                                <ul style="list-style-type:none;"><li>Every major programming language has at least one test framework.
                                         Frameworks like JUnit, NUnit, Cucumber, and pytest enable you, as the
                                         programmer,
                                         to automate tests, execute suites, and report results. However, the framework
@@ -139,7 +137,7 @@
                                         how to write good tests!
                                     </li>
                                 </ul>
-                                </p>
+
                             </div>
                         </div>
                     </div>
@@ -153,7 +151,6 @@
                         <div id="collapse2" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p class="grw-font">Python Reference file: calculator_test.py</p>
-                                <p class="grw-font">
                                 <ul style="list-style-type:none;">
                                     <li>def <b>test_add_numbers(clear_history_fixture)</b>:</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;"""test addition of numbers"""</li>
@@ -168,8 +165,9 @@
                                         == 60.0</b></li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;assert
                                         isinstance(Calculations.get_last_calculation_object(), Addition)
-                                    </li>
+                                    </li></ul>
                                     <br>
+                                <ul style="list-style-type:none;">
                                     <li>calculator_test.py method test_add_numbers tests add_numbers method of the
                                         Calculator (calculator.py)
                                         in arrange - we initialize the tuple to be ued for testing.
@@ -180,7 +178,7 @@
 
                                     </li>
                                 </ul>
-                                </p>
+
 
 
                             </div>
@@ -195,7 +193,7 @@
                         </div>
                         <div id="collapse3" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p class="grw-font">
+
                                 <ul style="list-style-type:none;">
                                     <li>def test_divide_numbers(clear_history_fixture):</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;"""test division of numbers"""</li>
@@ -217,14 +215,12 @@
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assert
                                         Calculations.get_last_calculation_result_value() == 1.0 <b># Assert</b></li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;# Below statement is not part of any coverage</li>
-                                    <li&nbsp;&nbsp;&nbsp;&nbsp;>assert
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;assert
                                         isinstance(Calculations.get_last_calculation_object(), Division)
                                     </li>
 
                                 </ul>
-                                </p>
-                                </ul>
-                                </p>
+
                             </div>
                         </div>
                     </div>
@@ -237,7 +233,6 @@
                         </div>
                         <div id="collapse4" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p class="grw-font">
                                 <ul>
                                     <li>The testing is important since it discovers defects/bugs before the delivery to
                                         the client, which guarantees the quality of the software. It makes the software
@@ -252,10 +247,9 @@
                                         comparison to the actual requirements.
                                     </li>
                                 </ul>
-                                </p>
+
                                 <p class="grw-font">Advantages
                                 <p>
-                                <p class="grw-font">
                                 <ul>
                                     <li>Finding bugs or issues in the code:Service/Product in early stages are upmost
                                         important to avoid cascading issues.
@@ -300,7 +294,7 @@
                                     </li>
                                 </ul>
 
-                                </p>
+
                             </div>
                         </div>
                     </div>
@@ -314,7 +308,6 @@
                         </div>
                         <div id="collapse12" class="panel-collapse collapse in">
                             <div class="panel-body">
-                                <p class="grw-font">
                                 <ul>
                                     <li>In below example, there are three files in reference - readfile.py, readcsv.py
                                         and readcsv_test.py
@@ -336,15 +329,14 @@
                                         also.
                                     </li>
                                 </ul>
-                                </p>
+
                                 <p class="grw-font">Example</p>
-                                <p class="grw-font">
                                 <ul style="list-style-type:none;">
-                                    <li>"""Base class for reading file"""</li>
-                                    <br>
+                                    <li>"""Base class for reading file"""</li></ul>
+                                    <br><ul style="list-style-type:none;">
                                     <li><b>class ReadFile:</b></li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""Read file"""</li>
-                                    <br>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""Read file"""</li></ul>
+                                    <ul style="list-style-type:none;">
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;# The __init__ method is a constructor and runs as soon
                                         as an
                                     </li>
@@ -355,8 +347,8 @@
                                         the path"""
                                     </li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self._path = path</li>
-                                    <br>
-                                    <br>
+                                    </ul><br>
+                                    <br><ul style="list-style-type:none;">
                                     <li>"""Subclass Class for Reading CSV"""</li>
                                     <li>import pandas as pd</li>
 
@@ -376,27 +368,26 @@
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("data_frame : ",
                                         data_frame[:])
                                     </li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return True</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return True</li></ul>
                                     <br>
-                                    <br>
+                                    <br><ul style="list-style-type:none;">
                                     <li><b>"""Testing of Read CSV"""</b></li>
                                     <li>import os</li>
-                                    <li>import pytest</li>
-                                    <br>
-                                    <li>from calc.file_utils.readcsv import ReadCSV</li>
-                                    <br>
+                                <li>import pytest</li></ul>
+                                    <br><ul style="list-style-type:none;">
+                                <li>from calc.file_utils.readcsv import ReadCSV</li></ul>
+                                    <br><ul style="list-style-type:none;">
                                     <li>FIXTURE_DIR = os.path.join(</li>
                                     <li>
                                         os.path.dirname(os.path.realpath('C://Users//SuchiK//PycharmProjects//calc2//')),
                                     </li>
                                     <li>'calc2//tests//test_data')</li>
                                     <li><b>@pytest.mark.datafiles(</b></li>
-                                    <li>os.path.join(FIXTURE_DIR, 'addition.csv') )</b></li>
+                                    <li><b>os.path.join(FIXTURE_DIR, 'addition.csv') )</b></li>
                                     <li>def <b>test_read_csv_file(datafiles):</b></li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;"""test read csv file"""</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;assert ReadCSV(datafiles).read_csv_file() is True</li>
                                 </ul>
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -441,6 +432,9 @@
             </a>
             <a href="https://github.com/SuchiKhare/calc2/tree/cal2_part5_scratch" class="me-4 text-reset">
                 <i class="fab fa-github"></i>
+            </a>
+            <a href="w3cvalidator/aaatesting.html" class="me-4 text-reset">
+                W3CValidator
             </a>
         </div>
     </footer>

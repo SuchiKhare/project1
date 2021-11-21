@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Cal and OOPs</title>
@@ -75,12 +75,14 @@
                 <p><a href="webserver.html">P1:Web Server</a></p>
                 <p><a href="ipanddns.html">P1:IP Address and DNS</a></p>
                 <p><a href="pylintfile.html">P2:pylint</a></p>
-                <p><a href="basicoops.html">P2:Glossary of OOP terms with definitions</b></a></p>
+                <p><a href="basicoops.html">P2:Glossary of OOP terms with definitions</a></p>
                 <p><a href="caloops.html"><b>P2:Calculator and principles of OOP</b></a></p>
                 <p><a href="aaatesting.html">P2:AAA testing with Python</a></p>
                 <p><a href="solid.html">P2:Calculator and SOLID Object Oriented Design</a></p>
                 <hr class="black">
-                <!--<p><a class="btn btn-first" href="webserver.html" download>Send PDF</a></p>-->
+                <img class="img-fluid" height="180" width="180" src="images/calculator.png"
+                     alt="image of calculator">
+                <p class="left">Project2 in python Implementation by Suchi Khare</p><br>
 
 
             </div>
@@ -97,7 +99,6 @@
                         <div id="collapse1" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p class="grw-font">What</p>
-                                <p class="grw-font">
                                 <ul>
                                     <li>An abstract class can be considered as a blueprint for other classes.</li>
                                     <li>It allows you to create a set of methods that must be created within any child
@@ -106,23 +107,25 @@
                                     <li>A class which contains one or more abstract methods is called an abstract class.
                                     </li>
                                     <li>An abstract method is a method that has a declaration but does not have an
-                                        implementation.
+                                        implementation.So here user is kept unaware of the basic implementation of a
+                                        function property.
+                                        The user is only able to view basic functionalities whereas the internal details
+                                        are hidden.
+
                                     </li>
                                     <li>When we want to provide a common interface for different implementations of a
                                         component, we use an abstract class
                                     </li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Why</p>
-                                <p class="grw-font">
+
                                 <ul>
                                     <li>By defining an abstract base class, you can define a common Application Program
                                         Interface(API) for a set of subclasses
                                     </li>
                                 </ul>
-                                </p>
+
                                 <p class="grw-font">How</p>
-                                <p class="grw-font">
                                 <ul>
                                     <li>Python does not provide abstract classes. Python comes with a module that
                                         provides
@@ -136,9 +139,7 @@
                                     </li>
                                     <li>A method becomes abstract when decorated with the keyword</li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Python file reference : result.py and addition.py</p>
-                                <p class="grw-font">
                                 <ul>
 
                                     <li><b>Result(ABC)</b> class is the abstract class with one abstract method
@@ -152,33 +153,40 @@
                                     </li>
 
                                 </ul>
-                                </p>
                                 <p class="grw-font">Example</p>
-                                <p class="grw-font">
                                 <ul style="list-style-type:none;">
 
                                     <li>"""Abstract class"""</li>
                                     <li>from abc import abstractmethod, ABC</li>
-                                    <br>
-
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>class <b>Result(ABC)</b>:</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;"""result for all the operations"""</li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint: disable=too-few-public-methods</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;<b>@abstractmethod</b></li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;def <b>get_output(self)</b>:</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""this is the abstract method
                                         to be implemented by impl classes"""
                                     </li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>"""Class for Addition Operation"""</li>
                                     <li>from calc.calculations.operation import Operation</li>
                                     <li>from calc.calculations.result import Result</li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
 
                                     <li>class <b>Addition</b>(Operation, <b>Result)</b>:</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;"""subclass Addition extending base Operation"""</li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;def <b>get_output(self)</b>:</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""Adds the elements in
                                         tuple"""
@@ -192,8 +200,6 @@
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return sum_of_elements</li>
 
                                 </ul>
-                                </p>
-
                             </div>
                         </div>
                     </div>
@@ -207,7 +213,6 @@
                         <div id="collapse2" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p class="grw-font">What</p>
-                                <p class="grw-font">
                                 <ul>
                                     <li><b>Wrapping data</b> and the <b>methods</b> that work on data within one unit is
                                         called Encapsulation.
@@ -220,7 +225,9 @@
                                         data that
                                         is member functions, variables etc.
                                     </li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul>
                                     <li>in below , all the variables and functions are encapsulated.</li>
                                     <li><b>Private variable</b> -- an object’s variable can only be changed by an
                                         object’s method.
@@ -240,11 +247,8 @@
                                     </li>
 
                                 </ul>
-                                </p>
-
 
                                 <p class="grw-font">Python file reference : operation.py and addition.py</p>
-                                <p class="grw-font">
                                 <ul>
                                     <li>Basically all classes are example of an encapsulation as it encapsulates all the
                                         data that is member functions, variables.
@@ -252,25 +256,31 @@
                                     <li>Subclass - Addition, Subtraction, Multiplication , Division etc encapsulates the
                                         data and data is present in the base class(Operation)
                                     </li>
-                                <li>values is marked as protected in my calculator example and underscore is used. values is members of the class that cannot be accessed
-                                    outside the
-                                    class but can be accessed from within the class and its subclasses.</li>
+                                    <li>values is marked as protected in my calculator example and underscore is used.
+                                        values is members of the class that cannot be accessed
+                                        outside the
+                                        class but can be accessed from within the class and its subclasses.
+                                    </li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Example</p>
-                                <p class="grw-font">
                                 <ul style="list-style-type:none;">
                                     <li>class <b>Operation:</b></li>
                                     <li>"""Base class"""</li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, values: tuple):</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.<b>_values</b> =
                                         Operation.convert_cal_input_to_float(values)
                                     </li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>class <b>Addition(Operation, Result)</b>:</li>
                                     <li>"""subclass Addition extending base Operation"""</li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;def get_output(self):</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""Adds the elements in
                                         tuple"""
@@ -283,8 +293,6 @@
                                     </li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return sum_of_elements</li>
                                 </ul>
-                                </p>
-
                             </div>
                         </div>
                     </div>
@@ -312,7 +320,6 @@
                                         behaviour by different implementation.
                                     </li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Why</p>
                                 <ul>
                                     <li>Represents real-world relationships well.</li>
@@ -320,10 +327,8 @@
                                     <li>Transitive in nature.</li>
 
                                 </ul>
-                                </p>
                                 <p class="grw-font">Python file reference : operation.py and addition.py,
                                     subtraction.py, multiplication.py and division.py</p>
-                                <p class="grw-font">
                                 <ul>
                                     <li>Inheritance is the capability of one class to derive or inherit the properties
                                         from another class.
@@ -334,21 +339,26 @@
                                         members (ex- values:tuple) of the Base class(Operation)
                                     </li>
                                 </ul>
-                                </p>
+
                                 <p class="grw-font">Example</p>
-                                <p class="grw-font">
                                 <ul style="list-style-type:none;">
                                     <li>class <b>Operation:</b></li>
                                     <li>"""Base class"""</li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, values: tuple):</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.<b>_values</b> =
                                         Operation.convert_cal_input_to_float(values)
                                     </li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>class <b>Addition(Operation, Result)</b>:</li>
                                     <li>"""subclass Addition extending base Operation"""</li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;def get_output(self):</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""Adds the elements in
                                         tuple"""
@@ -361,10 +371,6 @@
                                     </li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return sum_of_elements</li>
                                 </ul>
-                                </p>
-
-                                </ul>
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -378,7 +384,6 @@
                         <div id="collapse4" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p class="grw-font">Python file reference : operation.py and addition.py</p>
-                                <p class="grw-font">
                                 <ul>
                                     <li>Polymorphism means having many forms.</li>
                                     <li>Same function name (but different signatures) being used for different types.
@@ -391,28 +396,36 @@
                                         class also to have different behaviour of the function
                                     </li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Example</p>
-                                <p class="grw-font">
                                 <ul style="list-style-type:none;">
                                     <li>class <b>Operation:</b></li>
                                     <li>"""Base class"""</li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, values: tuple):</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.<b>_values</b> =
                                         Operation.convert_cal_input_to_float(values)
                                     </li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>class <b>Result:</b></li>
                                     <li>"""Base class"""</li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;@abstractmethod</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def get_output(self):
                                     </li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>class <b>Addition(Operation, Result)</b>:</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;"""subclass Addition extending base Operation"""</li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;def <b>get_output(self):</b></li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""Adds the elements in
                                         tuple"""
@@ -424,10 +437,14 @@
                                         = sum_of_elements <b>+</b> value
                                     </li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return sum_of_elements</li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>class <b>Subtraction(Operation, Result)</b>:</li>
                                     <li>"""subclass Subtraction extending base Operation"""</li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;def <b>get_output(self):</b></li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""subtracts the elements in
                                         tuple"""
@@ -440,7 +457,6 @@
                                     </li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return diff_of_elements</li>
                                 </ul>
-                                </p>
 
                             </div>
                         </div>
@@ -453,7 +469,6 @@
                         </div>
                         <div id="collapse5" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p class="grw-font">
                                 <ul>
                                     <li>A class is a blueprint for the creating object.</li>
                                     <li>In real life, a car is an object. The car has attributes, such as weight and
@@ -461,29 +476,25 @@
                                     </li>
                                     <li>To create a class, use the keyword class</li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Python file reference : operation.py and addition.py</p>
-                                <p class="grw-font">
                                 <ul>
                                     <li>Subclass - Addition, Subtraction, Multiplication , Division etc.
                                     </li>
                                     <li>Base class - Operation</li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Example</p>
-                                <p class="grw-font">
                                 <ul style="list-style-type:none;">
                                     <li>class <b>Operation:</b></li>
                                     <li>"""Base class"""</li>
-                                    <br>
+                                </ul>
+                                <br>
 
-                                    <br>
+                                <br>
+                                <ul style="list-style-type:none;">
                                     <li>class <b>Addition(Operation)</b>:</li>
                                     <li>"""subclass Addition extending base Operation"""</li>
-                                    <br>
 
                                 </ul>
-                                </p>
 
                             </div>
                         </div>
@@ -496,7 +507,6 @@
                         </div>
                         <div id="collapse6" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p class="grw-font">
                                 <ul>
                                     <li>An Object is an instance of a Class.</li>
                                     <li>A class is like a blueprint while an instance is a copy of the class with actual
@@ -504,8 +514,6 @@
                                     </li>
                                     <li>An object consists of :</li>
                                 </ul>
-                                </p>
-                                <p class="grw-font">
                                 <ul style="list-style-type:none;">
 
                                     <li>State/attributes: It is represented by the attributes of an object. It also
@@ -519,15 +527,12 @@
                                     </li>
                                 </ul>
                                 <p class="grw-font">Python file reference : calculation.py</p>
-                                <p class="grw-font">
                                 <ul>
                                     <li>class is Calculations and method for example is add_addition_calculation(values)
                                     </li>
                                     <li>Example below the addition is an object</li>
                                     <li>different ways to create object :</li>
                                 </ul>
-                                </p>
-                                <p class="grw-font">
                                 <ul style="list-style-type:none;">
                                     <li>addition = Addition(values)</li>
                                     <li>addition = Addition.create_operation(values)</li>
@@ -535,9 +540,7 @@
                                         is discussed in Factory section
                                     </li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Example</p>
-                                <p class="grw-font">
                                 <ul style="list-style-type:none;">
                                     <li>def add_addition_calculation(values):</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;"""Add addition object to history"""</li>
@@ -546,7 +549,6 @@
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;# Get the result of the calculation</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;return True</li>
                                 </ul>
-                                </p>
 
                             </div>
                         </div>
@@ -559,7 +561,6 @@
                         </div>
                         <div id="collapse7" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p class="grw-font">
                                 <ul>
                                     <li>The phrase "instantiating a class" means the same thing as "creating an object."
                                         When you create an object, you are creating an "instance" of a class, therefore
@@ -572,9 +573,7 @@
                                         referenced by an identifier
                                     </li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Python file reference : calculation.py</p>
-                                <p class="grw-font">
                                 <ul>
                                     <li>class is Calculations and method for example is add_addition_calculation(values)
                                     </li>
@@ -583,8 +582,6 @@
                                         instances
                                     </li>
                                 </ul>
-                                </p>
-                                <p class="grw-font">
                                 <ul style="list-style-type:none;">
                                     <li>addition = Addition(values)</li>
                                     <li>addition = Addition.create_operation(values)</li>
@@ -592,9 +589,7 @@
                                         is discussed in Factory section
                                     </li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Example</p>
-                                <p class="grw-font">
                                 <ul style="list-style-type:none;">
                                     <li>def add_addition_calculation(values):</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;"""Add addition object to history"""</li>
@@ -603,7 +598,6 @@
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;# Get the result of the calculation</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;return True</li>
                                 </ul>
-                                </p>
 
                             </div>
                         </div>
@@ -616,7 +610,6 @@
                         </div>
                         <div id="collapse8" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p class="grw-font">
                                 <ul>
                                     <li>Called when an instance of an object is created.</li>
                                     <li>Constructors are generally used for instantiating an object. The task of
@@ -638,9 +631,7 @@
                                         rest of the arguments are provided by the programmer.
                                     </li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Python file reference : operation.py</p>
-                                <p class="grw-font">
                                 <ul>
                                     <li>class is Operation and method for example is <b>__init__(self, values:
                                         tuple)</b>
@@ -654,9 +645,7 @@
                                         convert_cal_input_to_float(values)
                                     </li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Example</p>
-                                <p class="grw-font">
                                 <ul style="list-style-type:none;">
                                     <li># The __init__ method is a constructor and runs as soon as an</li>
                                     <li># object of a Operation class is instantiated.</li>
@@ -671,8 +660,6 @@
                                         Operation.convert_cal_input_to_float(values)
                                     </li>
                                 </ul>
-                                </p>
-
                             </div>
                         </div>
                     </div>
@@ -685,7 +672,6 @@
                         </div>
                         <div id="collapse9" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p class="grw-font">
                                 <ul>
                                     <li>Methods are functions defined inside the body of a class.They are used to define
                                         the behaviors of an object.
@@ -693,23 +679,21 @@
                                     <li>each instance have their own copy of the states/attributes and
                                         behaviours/methods
                                     </li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul>
                                     <li>below example : 2 methods - sing() and dance().
                                         These are called <b>instance methods</b> because they are <b>called on an
                                             instance object</b> i.e blu.
                                     </li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Python file reference : addition.py</p>
-                                <p class="grw-font">
                                 <ul>
                                     <li>class Addition, Subtraction, Multiplication, Division has the <b>instance
                                         method</b> named get_output(self)
                                     </li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Example</p>
-                                <p class="grw-font">
                                 <ul style="list-style-type:none;">
                                     <li>"""Class for Addition Operation"""</li>
                                     <li>from calc.calculations.operation import Operation</li>
@@ -729,7 +713,6 @@
                                     </li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return sum_of_elements</li>
                                 </ul>
-                                </p>
 
                             </div>
                         </div>
@@ -742,7 +725,6 @@
                         </div>
                         <div id="collapse10" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p class="grw-font">
                                 <ul>
                                     <li>The @classmethod is a built-in function decorator that is an expression that
                                         gets evaluated after your function is defined.
@@ -758,18 +740,16 @@
                                         it can modify a class variable that will be applicable to all the instances.
                                     </li>
                                     <li>class method to create factory methods.</li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul>
                                     <li>below example : create_operation is the class method
                                 </ul>
-                                </p>
                                 <p class="grw-font">Python file reference : operation.py</p>
-                                <p class="grw-font">
                                 <ul>
                                     <li>class Operation has the <b>class method</b> named create_operation</li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Example</p>
-                                <p class="grw-font">
                                 <ul style="list-style-type:none;">
                                     <li><b>@classmethod</b></li>
                                     <li>def <b>create_operation(cls, values: tuple)</b>:</li>
@@ -781,7 +761,6 @@
                                     </li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return cls(values)</li>
                                 </ul>
-                                </p>
 
                             </div>
                         </div>
@@ -794,7 +773,6 @@
                         </div>
                         <div id="collapse11" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p class="grw-font">
                                 <ul>
                                     <li>The @staticmethod decorator is used.</li>
                                     <li>A static method does not receive an implicit first argument.</li>
@@ -813,18 +791,16 @@
                                         parameters.
                                         On the other hand class methods must have class as a parameter.
                                     </li>
-                                    <br>
+                                </ul>
+                                <br>
+                                <ul>
                                     <li>below example : clear_history is the static method
                                 </ul>
-                                </p>
                                 <p class="grw-font">Python file reference : calculations.py</p>
-                                <p class="grw-font">
                                 <ul>
                                     <li>class Calculations has the <b>static method</b> named clear_history()</li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Example</p>
-                                <p class="grw-font">
                                 <ul style="list-style-type:none;">
                                     <li># pylint: disable=too-few-public-methods</li>
                                     <li>@staticmethod</li>
@@ -833,16 +809,14 @@
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.history.clear()</li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;return True</li>
                                 </ul>
-                                </p>
-                                <p class="grw-font">
+
+                                <p>Driver</p>
                                 <ul style="list-style-type:none;">
-                                    Driver
                                     <li># static method clear_history is called directly using the class Calculations
                                         not on the object
                                     </li>
                                     <li>Calculations.clear_history()</li>
                                 </ul>
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -854,7 +828,6 @@
                         </div>
                         <div id="collapse12" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p class="grw-font">
                                 <ul>
                                     <li>pytest fixtures are functions attached to the tests which <b>run before the test
                                         function is executed.</b>
@@ -885,9 +858,7 @@
                                     <li>particular function is a fixture by decorating it with <b>@pytest.fixture</b>
                                     </li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Python file reference : calculator_history_test.py</p>
-                                <p class="grw-font">
                                 <ul>
                                     <li>Test class has <b>two fixture methods</b> - clear_history_fixture() and
                                         setup_calculation_fixture()
@@ -895,47 +866,57 @@
                                         file.These two functions run before the test function is executed.
                                     </li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Example</p>
-                                <p class="grw-font">
-                                <li>"""Testing the Calculator History"""</li>
-                                <li>import pytest</li>
+                                <ul>
+                                    <li>"""Testing the Calculator History"""</li>
+                                    <li>import pytest</li>
+                                </ul>
                                 <br>
-                                <li>from calc.calculations.multiplication import Multiplication</li>
-                                <li>from calc.history.calculations import Calculations</li>
-                                <li>from calc.calculations.addition import Addition</li>
+                                <ul>
+                                    <li>from calc.calculations.multiplication import Multiplication</li>
+                                    <li>from calc.history.calculations import Calculations</li>
+                                    <li>from calc.calculations.addition import Addition</li>
+                                </ul>
                                 <br>
-                                <li><b>@pytest.fixture</b></li>
-                                <li>def clear_history_fixture():</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;"""fixture method will run each time passed to the test"""
-                                </li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint: disable=redefined-outer-name</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.clear_history()</li>
+                                <ul>
+                                    <li><b>@pytest.fixture</b></li>
+                                    <li>def clear_history_fixture():</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""fixture method will run each time passed to the
+                                        test"""
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint: disable=redefined-outer-name</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.clear_history()</li>
+                                </ul>
                                 <br>
-                                <li><b>@pytest.fixture</b></li>
-                                <li>def setup_calculation_fixture():</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;"""fixture method will run each time passed to the test"""
-                                </li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint: disable=redefined-outer-name</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;values = (2, 1)</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;addition = Addition(values)</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.add_calculation(addition)</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;values2 = (1, 1)</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;addition2 = Addition(values2)</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.add_calculation(addition2)</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;values3 = (1, 4)</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;multiplication1 = Multiplication(values3)</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.add_calculation(multiplication1)</li>
+                                <ul>
+                                    <li><b>@pytest.fixture</b></li>
+                                    <li>def setup_calculation_fixture():</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""fixture method will run each time passed to the
+                                        test"""
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint: disable=redefined-outer-name</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;values = (2, 1)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;addition = Addition(values)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.add_calculation(addition)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;values2 = (1, 1)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;addition2 = Addition(values2)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.add_calculation(addition2)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;values3 = (1, 4)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;multiplication1 = Multiplication(values3)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.add_calculation(multiplication1)</li>
+                                </ul>
                                 <br>
-                                <li>def test_add_calculation_to_history(<b>clear_history_fixture,
-                                    setup_calculation_fixture</b>):
-                                </li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;"""testing clear history returns true for success"""</li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint:
-                                    disable=unused-argument,redefined-outer-name,singleton-comparison
-                                </li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;assert Calculations.count_history() == 3</li>
-                                </p>
+                                <ul>
+                                    <li>def test_add_calculation_to_history(<b>clear_history_fixture,
+                                        setup_calculation_fixture</b>):
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""testing clear history returns true for success"""
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint:
+                                        disable=unused-argument,redefined-outer-name,singleton-comparison
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;assert Calculations.count_history() == 3</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -948,7 +929,6 @@
                         </div>
                         <div id="collapse13" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p class="grw-font">
                                 <ul>
                                     <li>Similar to concepts of down-casting and up-casting in Java</li>
                                     <li>Type Casting is the method to convert the variable data type into a certain data
@@ -963,13 +943,11 @@
                                         type into certain data type in order to the operation required.
                                     </li>
                                 </ul>
-                                </p>
                                 <p class="grw-font">Python file reference : operation.py</p>
                                 <ul>
                                     <li>Python class Operation(Base class) of Addition, Subtraction etc</li>
                                     <li>Explicitly typecasting to float</li>
                                 </ul>
-                                </p>
 
                                 <p class="grw-font">Example</p>
                                 <ul>
@@ -1010,11 +988,20 @@
             </div>
             <div class="col-sm-2 sidenav">
                 <div class="text-center">
-                    <img class="img-fluid" height="180" width="180" src="images/calculator.png"
+
+                    <img class="img-fluid" height="180" width="180" src="images/abstraction.jpg"
                          alt="image of calculator">
-                    <p class="left">Project2 Implementation by Suchi Khare</p><br><br>
-                    <p class="left">Calculator is implemented in python.
-                    </p>
+                    <p class="left">Abstraction</p><br>
+                    <img class="img-fluid" height="180" width="180" src="images/encapsulation.jpg"
+                         alt="image of calculator">
+                    <p class="left">Encapsulation</p><br>
+                    <img class="img-fluid" height="180" width="180" src="images/inheritance.png"
+                         alt="image of calculator">
+                    <p class="left">Inheritance</p><br>
+                    <img class="img-fluid" height="180" width="180" src="images/polymorphism.png"
+                         alt="image of calculator">
+                    <p class="left">Polymorphism</p><br>
+
                 </div>
             </div> <!-- closed col-sm-2 sidenav -->
         </div>
@@ -1048,6 +1035,9 @@
             </a>
             <a href="https://github.com/SuchiKhare/calc2/tree/cal2_part5_scratch" class="me-4 text-reset">
                 <i class="fab fa-github"></i>
+            </a>
+            <a href="w3cvalidator/caloops.html" class="me-4 text-reset">
+                W3CValidator
             </a>
         </div>
     </footer>
