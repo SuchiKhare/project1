@@ -374,6 +374,131 @@
                             </div>
                         </div>
                     </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Polymorphism in
+                                    calculator</a>
+                            </h4>
+                        </div>
+                        <div id="collapse4" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p class="grw-font">Python file reference : operation.py and addition.py</p>
+                                <ul>
+                                    <li>Polymorphism means having many forms.</li>
+                                    <li>Same function name (but different signatures) being used for different types.
+                                    </li>
+                                    <li>get_output() same name but different behaviour in subclass such as get_output in
+                                        Addition adds the given
+                                        numbers while get_output in Subtraction subtracts the given numbers.
+                                    </li>
+                                    <li>Also, Ex: we can have function name same and different parameters in the same
+                                        class also to have different behaviour of the function
+                                    </li>
+                                </ul>
+                                <p class="grw-font">Example</p>
+                                <ul style="list-style-type:none;">
+                                    <li>class <b>Operation:</b></li>
+                                    <li>"""Base class"""</li>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, values: tuple):</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.<b>_values</b> =
+                                        Operation.convert_cal_input_to_float(values)
+                                    </li>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li>class <b>Result:</b></li>
+                                    <li>"""Base class"""</li>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;@abstractmethod</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def get_output(self):
+                                    </li>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li>class <b>Addition(Operation, Result)</b>:</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""subclass Addition extending base Operation"""</li>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def <b>get_output(self):</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""Adds the elements in
+                                        tuple"""
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum_of_elements = 0.0</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for value in <b>self._values</b>:
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum_of_elements
+                                        = sum_of_elements <b>+</b> value
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return sum_of_elements</li>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li>class <b>Subtraction(Operation, Result)</b>:</li>
+                                    <li>"""subclass Subtraction extending base Operation"""</li>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def <b>get_output(self):</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""subtracts the elements in
+                                        tuple"""
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diff_of_elements = 0.0</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for value in <b>self._values</b>:
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diff_of_elements
+                                        = diff_of_elements <b>-</b> value
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return diff_of_elements</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Class</a>
+                            </h4>
+                        </div>
+                        <div id="collapse5" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>A class is a blueprint for the creating object.</li>
+                                    <li>In real life, a car is an object. The car has attributes, such as weight and
+                                        color, and methods, such as drive and brake.
+                                    </li>
+                                    <li>To create a class, use the keyword class</li>
+                                </ul>
+                                <p class="grw-font">Python file reference : operation.py and addition.py</p>
+                                <ul>
+                                    <li>Subclass - Addition, Subtraction, Multiplication , Division etc.
+                                    </li>
+                                    <li>Base class - Operation</li>
+                                </ul>
+                                <p class="grw-font">Example</p>
+                                <ul style="list-style-type:none;">
+                                    <li>class <b>Operation:</b></li>
+                                    <li>"""Base class"""</li>
+                                </ul>
+                                <br>
+
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li>class <b>Addition(Operation)</b>:</li>
+                                    <li>"""subclass Addition extending base Operation"""</li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
