@@ -221,8 +221,73 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">(Calculator)-How
+                                    pylint is configured</a>
+                            </h4>
+                        </div>
+                        <div id="collapse4" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p class="grw-font"> Calculator project-pylint configuration</p>
+                                <ul>
+                                    <li>configure pylintrc in root directory</li>
+                                    <li>pip install -r requirements.txt</li>
+                                    <li>requirement.txt has packages needs to be installed such as pytest-cov (for
+                                        coverage of the code)
+                                        , pytest , pycodestyle and pytest-pylint
+                                    </li>
+                                </ul>
 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">pylint instruction
+                                    through code</a>
+                            </h4>
+                        </div>
+                        <div id="collapse12" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Examples of disabling pylint from the code instead of pylintrc configuration
+                                        file
+                                    </li>
+                                    <li># pylint: disable=too-few-public-methods</li>
+
+                                    <li># pylint: disable=redefined-outer-name</li>
+                                </ul>
+                                <p class="grw-font">Example in calculator.py</p>
+                                <ul style="list-style-type:none;">
+                                    <li>class Calculator:</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""calculator class"""</li>
+
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<b># pylint: disable=too-few-public-methods</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;@staticmethod</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def add_numbers(tuple_elements: tuple):</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""adds elements in tuple"""
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Calculations.add_addition_calculation(tuple_elements)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return True</li>
+                                </ul>
+                                <p class="grw-font">Example in calculator_history_test.py</p>
+                                <ul style="list-style-type:none;">
+
+                                    <li>@pytest.fixture</li>
+                                    <li>def clear_history_fixture():</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""fixture method will run each time passed to the
+                                        test"""
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<b># pylint: disable=redefined-outer-name</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.clear_history()</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-2 sidenav">
                 <div class="text-center">
