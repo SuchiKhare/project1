@@ -499,6 +499,109 @@
                             </div>
                         </div>
                     </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Object</a>
+                            </h4>
+                        </div>
+                        <div id="collapse6" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>An Object is an instance of a Class.</li>
+                                    <li>A class is like a blueprint while an instance is a copy of the class with actual
+                                        values
+                                    </li>
+                                    <li>An object consists of :</li>
+                                </ul>
+                                <ul style="list-style-type:none;">
+
+                                    <li>State/attributes: It is represented by the attributes of an object. It also
+                                        reflects the properties of an object.
+                                    </li>
+                                    <li>Behavior: It is represented by the methods of an object. It also reflects the
+                                        response of an object to other objects.
+                                    </li>
+                                    <li>Identity: It gives a unique name to an object and enables one object to interact
+                                        with other objects.
+                                    </li>
+                                </ul>
+                                <p class="grw-font">Python file reference : calculation.py</p>
+                                <ul>
+                                    <li>class is Calculations and method for example is add_addition_calculation(values)
+                                    </li>
+                                    <li>Example below the addition is an object</li>
+                                    <li>different ways to create object :</li>
+                                </ul>
+                                <ul style="list-style-type:none;">
+                                    <li>addition = Addition(values)</li>
+                                    <li>addition = Addition.create_operation(values)</li>
+                                    <li>Please note - factory method for instantiation teh class or creating teh object
+                                        is discussed in Factory section
+                                    </li>
+                                </ul>
+                                <p class="grw-font">Example</p>
+                                <ul style="list-style-type:none;">
+                                    <li>def add_addition_calculation(values):</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""Add addition object to history"""</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<b>addition = Addition.create_operation(values)</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.add_calculation(addition)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# Get the result of the calculation</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;return True</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Instantiating</a>
+                            </h4>
+                        </div>
+                        <div id="collapse7" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>The phrase "instantiating a class" means the same thing as "creating an object."
+                                        When you create an object, you are creating an "instance" of a class, therefore
+                                        "instantiating" a class.
+                                    </li>
+                                    <li>When <b>class</b> is defined, only the description for the object is defined.
+                                        Therefore, <b>no memory or storage</b> is allocated.
+                                    </li>
+                                    <li>Creation of an <b>object - a location in memory</b> having a value and possibly
+                                        referenced by an identifier
+                                    </li>
+                                </ul>
+                                <p class="grw-font">Python file reference : calculation.py</p>
+                                <ul>
+                                    <li>class is Calculations and method for example is add_addition_calculation(values)
+                                    </li>
+                                    <li>different ways to create object/instantiate the class :</li>
+                                    <li>Addition class is instantiated , addition is an object, we can have multiple
+                                        instances
+                                    </li>
+                                </ul>
+                                <ul style="list-style-type:none;">
+                                    <li>addition = Addition(values)</li>
+                                    <li>addition = Addition.create_operation(values)</li>
+                                    <li>Please note - factory method for instantiation teh class or creating teh object
+                                        is discussed in Factory section
+                                    </li>
+                                </ul>
+                                <p class="grw-font">Example</p>
+                                <ul style="list-style-type:none;">
+                                    <li>def add_addition_calculation(values):</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""Add addition object to history"""</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<b>addition = Addition.create_operation(values)</b></li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.add_calculation(addition)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# Get the result of the calculation</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;return True</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
