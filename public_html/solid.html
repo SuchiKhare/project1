@@ -278,6 +278,66 @@
                 </div>
             </div>
         </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Liskov substitution
+                        principle (in calculator)</a>
+                </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p class="grw-font">Python file reference : Operation.py and Addition.py</p>
+                    <ul>
+                        <li>Functions that use pointers or references to base classes must be able to use
+                            objects of derived
+                            classes without knowing it.
+                        </li>
+                        <li>Derived classes must be substitutable for their base classes</li>
+                        <li>if a subclass redefines a function also present in the parent class, a
+                            client-user should not be noticing any difference in behaviour, and it is a
+                            substitute for the base class.For example, if you are using a function and your
+                            colleague change the base class, you should not notice any difference in the
+                            function that you are using.
+                        </li>
+                    </ul>
+                    <p class="grw-font">Example (Pls note that this is not in Calculator but just to
+                        explain the principle</p>
+                    <ul style="list-style-type:none;">
+                        <li>class <b>Operator:</b></li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;# Base Class</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, values: tuple):</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self._values =
+                            Operation.convert_cal_input_to_float(values)
+                        </li>
+                    </ul>
+                    <br>
+                    <ul>
+                        <li>class <b>Addition:</b></li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;# Subclass Class</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, values: tuple, name: String):</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super().__init__(self, values)
+                        </li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.name = name</li>
+                    </ul>
+                    <br>
+                    <ul>
+                        <li>If we are using a = <b>Operation((1.0, 2.0, 3.0))</b></li>
+                        <li>then we can use a = <b>Addition((1.0, 2.0, 3.0), "name")</b></li>
+
+                    </ul>
+                    <br>
+                    <p class="grw-font">Advantage</p>
+                    <ul style="list-style-type:none;">
+                        <li>The result of this principle is that we’d write our code in a consistent manner
+                            and, the end-user will need to learn how our code works
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="text-center text-lg-start bg-light text-muted">
