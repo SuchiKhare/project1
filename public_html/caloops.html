@@ -766,6 +766,161 @@
                         </div>
                     </div>
 
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">Static methods</a>
+                            </h4>
+                        </div>
+                        <div id="collapse11" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>The @staticmethod decorator is used.</li>
+                                    <li>A static method does not receive an implicit first argument.</li>
+                                    <li>A static method is also a method that is bound to the class and not the object
+                                        of the class.
+                                    </li>
+                                    <li>A static method can’t access or modify the class state.</li>
+                                    <li>It is present in a class because it makes sense for the method to be present in
+                                        class.
+                                    </li>
+                                    <li>A class method can access or modify the class state while a static method can’t
+                                        access or modify it.
+                                    </li>
+                                    <li>static methods know nothing about the class state.</li>
+                                    <li>They are utility-type methods that take some parameters and work upon those
+                                        parameters.
+                                        On the other hand class methods must have class as a parameter.
+                                    </li>
+                                </ul>
+                                <br>
+                                <ul>
+                                    <li>below example : clear_history is the static method
+                                </ul>
+                                <p class="grw-font">Python file reference : calculations.py</p>
+                                <ul>
+                                    <li>class Calculations has the <b>static method</b> named clear_history()</li>
+                                </ul>
+                                <p class="grw-font">Example</p>
+                                <ul style="list-style-type:none;">
+                                    <li># pylint: disable=too-few-public-methods</li>
+                                    <li>@staticmethod</li>
+                                    <li>def clear_history():</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""clear the history of calculations"""</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.history.clear()</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;return True</li>
+                                </ul>
+
+                                <p>Driver</p>
+                                <ul style="list-style-type:none;">
+                                    <li># static method clear_history is called directly using the class Calculations
+                                        not on the object
+                                    </li>
+                                    <li>Calculations.clear_history()</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">Fixture</a>
+                            </h4>
+                        </div>
+                        <div id="collapse12" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>pytest fixtures are functions attached to the tests which <b>run before the test
+                                        function is executed.</b>
+                                    </li>
+                                    <li>It provides a defined, reliable and consistent context for the tests.
+                                        This could include environment (for example a database configured with known
+                                        parameters) or
+                                        content (such as a dataset)
+                                    </li>
+                                    <li>Fixture errors:pytest does its best to put all the fixtures for a given test in
+                                        a linear order so that it can see which fixture happens first, second, third,
+                                        and so on. If an earlier fixture has a problem, though, and raises an exception,
+                                        pytest will stop executing fixtures for that test and mark the test as having an
+                                        error.
+
+                                        When a test is marked as having an error, it doesn’t mean the test failed,
+                                        though. It just means the test couldn’t even be attempted because one of the
+                                        things it depends on had a problem.
+                                    </li>
+                                    <li>If you want to make test data from files available to your tests, a good way to
+                                        do this is by loading these data in a fixture for use by your tests. This makes
+                                        use of the automatic caching mechanisms of pytest.
+
+                                        Another good approach is by adding the data files in the tests folder. There are
+                                        also community plugins available to help to manage this aspect of testing, e.g.
+                                        pytest-datadir and pytest-datafiles.
+                                    </li>
+                                    <li>particular function is a fixture by decorating it with <b>@pytest.fixture</b>
+                                    </li>
+                                </ul>
+                                <p class="grw-font">Python file reference : calculator_history_test.py</p>
+                                <ul>
+                                    <li>Test class has <b>two fixture methods</b> - clear_history_fixture() and
+                                        setup_calculation_fixture()
+                                        these two fixtures methods are passed as parameters to all the methods in this
+                                        file.These two functions run before the test function is executed.
+                                    </li>
+                                </ul>
+                                <p class="grw-font">Example</p>
+                                <ul>
+                                    <li>"""Testing the Calculator History"""</li>
+                                    <li>import pytest</li>
+                                </ul>
+                                <br>
+                                <ul>
+                                    <li>from calc.calculations.multiplication import Multiplication</li>
+                                    <li>from calc.history.calculations import Calculations</li>
+                                    <li>from calc.calculations.addition import Addition</li>
+                                </ul>
+                                <br>
+                                <ul>
+                                    <li><b>@pytest.fixture</b></li>
+                                    <li>def clear_history_fixture():</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""fixture method will run each time passed to the
+                                        test"""
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint: disable=redefined-outer-name</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.clear_history()</li>
+                                </ul>
+                                <br>
+                                <ul>
+                                    <li><b>@pytest.fixture</b></li>
+                                    <li>def setup_calculation_fixture():</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""fixture method will run each time passed to the
+                                        test"""
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint: disable=redefined-outer-name</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;values = (2, 1)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;addition = Addition(values)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.add_calculation(addition)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;values2 = (1, 1)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;addition2 = Addition(values2)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.add_calculation(addition2)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;values3 = (1, 4)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;multiplication1 = Multiplication(values3)</li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Calculations.add_calculation(multiplication1)</li>
+                                </ul>
+                                <br>
+                                <ul>
+                                    <li>def test_add_calculation_to_history(<b>clear_history_fixture,
+                                        setup_calculation_fixture</b>):
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""testing clear history returns true for success"""
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint:
+                                        disable=unused-argument,redefined-outer-name,singleton-comparison
+                                    </li>
+                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;assert Calculations.count_history() == 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-2 sidenav">
