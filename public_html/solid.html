@@ -221,6 +221,63 @@
                 </div>
             </div>
         </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"> Open–closed
+                        principle (in calculator)</a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p class="grw-font">Python file reference : calculator.py</p>
+                    <ul>
+                        <li>Software entities should be open for extension but closed for modification.</li>
+                        <li>You should not need to modify the code you have already written to accommodate
+                            new functionality,but simply add what you now need.
+                        </li>
+                        <li>This does not mean that you cannot change your code when the code premises needs
+                            to be modified, but that if you need to add new functions similar to the one
+                            present, you should not require to change other parts of the code.
+                        </li>
+                    </ul>
+                    <p class="grw-font">Example</p>
+                    <ul style="list-style-type:none;">
+                        <li>class <b>Calculator:</b></li>
+                    </ul>
+                    <br>
+                    <ul style="list-style-type:none;">
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;def add_numbers(tuple_elements: tuple):....</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;def subtract_numbers(tuple_elements: tuple):...</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;def multiply_numbers(tuple_elements: tuple):...</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;def divide_numbers(tuple_elements: tuple):...</li>
+                    </ul>
+                    <br>
+                    <ul style="list-style-type:none;">
+                        <li>If we want to add new functionality such as SquareRoot and Mean or Square or
+                            Median
+                            etc in the Calculator class, then we are just needed to add the new method
+                            instead of changing the existing
+                            method add, subtract, multiply and divide.None of the existing function need to
+                            be modified when we need to add new functionality.No existing functions in the
+                            other classes such as Calculations (for history) needs to be modified.
+                            that is why we call that Software entities should be open for extension but
+                            closed for modification.
+                        </li>
+                    </ul>
+                    <br>
+                    <ul style="list-style-type:none;">
+                    </ul>
+                    <p class="grw-font">Advantage</p>
+                    <ul style="list-style-type:none;">
+                        <li>The result is a very flexible class, that requires minimum time to be
+                            maintained.
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="text-center text-lg-start bg-light text-muted">
