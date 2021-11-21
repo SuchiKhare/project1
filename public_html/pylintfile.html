@@ -127,6 +127,76 @@
                             </div>
                         </div>
                     </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">What is
+                                    pylintrc</a>
+                            </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Pylint requires configuration via a <b>.pylintrc configuration file</b> as
+                                        detailed in Pylint's documentation.
+
+                                        Examples of few configuration is shown below:
+                                    </li>
+                                </ul>
+                                <ul style="list-style-type:none;">
+                                    <li># A comma-separated list of package or module names from where C extensions
+                                        may
+                                    </li>
+                                    <li># be loaded. Extensions are loading into the active Python interpreter and may
+                                    </li>
+                                    <li># run arbitrary code.</li>
+                                    <li>extension-pkg-allow-list=</li>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li># Files or directories to be skipped. They should be base names, not paths.</li>
+                                    <li>ignore=CVS, setup.py</li>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li>[MESSAGES CONTROL]</li>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li># Only show warnings with the listed confidence levels. Leave empty to show</li>
+                                    <li> # all. Valid levels: HIGH, INFERENCE, INFERENCE_FAILURE, UNDEFINED.</li>
+                                    <li>confidence=</li>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li># Disable the message, report, category or checker with the given id(s). You
+                                    </li>
+                                    <li># can either give multiple identifiers separated by comma (,) or put this.</li>
+                                    <li>disable=raw-checker-failed,</li>
+                                    <li>bad-inline-option,</li>
+                                    <li>locally-disabled,</li>
+                                    <li>file-ignored,</li>
+                                    <li>suppressed-message,</li>
+                                    <li>useless-suppression,</li>
+                                    <li>deprecated-pragma,</li>
+                                    <li>use-symbolic-message-instead</li>
+                                    <li>.....</li>
+                                    <li>[BASIC]</li>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li># Naming style matching correct argument names.</li>
+                                    <li>argument-naming-style=snake_case</li>
+                                </ul>
+                                <br>
+                                <ul style="list-style-type:none;">
+                                    <li># Regular expression matching correct argument names. Overrides argument-</li>
+                                    <li># naming-style.</li>
+                                    <li>#argument-rgx=</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
