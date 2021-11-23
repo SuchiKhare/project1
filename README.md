@@ -3,4 +3,4 @@
 
 [Project2-SuchiKhare](http://suchiproject2.eastus.azurecontainer.io)
 
-github link: https://github.com/SuchiKhare/project1/tree/SuchiBranch1
+github link: https://github.com/SuchiKhare/project1
