@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Cal Test Flow</title>
+    <link rel="stylesheet" href="css/suchistyle.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        a:link {
+            text-decoration: none;
+        }
+
+        a {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <img class="navbar-brand" src="images/logo.svg" alt="logo image">
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+                    <li class="dropdown, active">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-fw fa-wrench"></i>Menu(
+                            Project1 and Project2)
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="internethistory.html">P1:The Internet</a></li>
+                            <li><a href="webserver.html">P1:Web Server</a></li>
+                            <li><a href="ipanddns.html">P1:IP Address and DNS</a></li>
+                            <li><a href="pylintfile.html">P2:pylint</a></li>
+                            <li><a href="basicoops.html">P2:Glossary of OOP terms with definitions</a></li>
+                            <li><a href="caloops.html">P2:Calculator and principles of OOP</a></li>
+                            <li><a href="aaatesting.html">P2:AAA testing with Python</a></li>
+                            <li><a href="solid.html">P2:Calculator and SOLID Object Oriented Design</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="about.html"><i class="fa fa-fw fa-user"></i>About</a></li>
+                    <li><a href="contactus.html"><i class="fa fa-fw fa-envelope"></i>Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Navbar -->
+
+        <!-- Background image -->
+
+        <!-- Background image -->
+
+    </header>
+    <!-- Contents Start -->
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">py file</th>
+            <th scope="col">Class</th>
+            <th scope="col">Methods</th>
+            <th scope="col">Comments</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>calculator_test.py</td>
+            <td>-</td>
+            <td>test_divide_numbers(clear_history_fixture)</td>
+            <td>part1 : without exception. tuple(my_numbers) is set as (3.0, 1.0, 1.0).
+                Reason for <b>choosing tuples</b> is Iteration in a tuple is <b>faster</b> as compared to lists since
+                tuples in Python are immutable
+                and Tuples are generally used for <b>different data types</b></td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>calculator.py</td>
+            <td>Calculator</td>
+            <td>divide_numbers(tuple_elements: tuple)</td>
+            <td>Calculator is a <b>facade class</b> ie. front-facing interface masking more complex underlying or
+                structural code
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>calculations.py</td>
+            <td>Calculations</td>
+            <td>add_division_calculation(tuple_elements)</td>
+            <td>This adds Division object to history which is static attribute and is universal by calling 1. creating
+                the Operation ie Division object Division.create_operation(tuple_elements)and
+                then 2. adding to the history by add_calculation(divide)
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>division.py</td>
+            <td>Division</td>
+            <td>create_operation(tuple_elements)</td>
+            <td>This method is a <b>factory method and class method</b>.Also this <b>inherited</b> to Division
+                by parent class Operation.It takes first parameter as <b>class (cls)</b> and <b>instantiate class</b> in
+                this case its Division.
+                This invokes the <b>parameterized constructor __init__(self, values: tuple)</b> which in turns calls
+                static method convert_cal_input_to_float.This method converts each element in tuple using for loop
+                to float elements.In constructor the object state is set to converted tuple
+                Factory method allows the object instantiation to be centralized instead of scattering
+                instantiation of object at multiple places.
+                <p>Subclass - Addition, Subtraction, Multiplication , Division etc <b>encapsulates</b> the
+                    data and data is present in the base class(Operation)
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td>calculations.py</td>
+            <td>Calculations</td>
+            <td>add_calculation(operation)</td>
+            <td>This is a <b>static method</b> , called upon class not on object. Calculations.history.append(operation)
+                It adds Division object to history which is static attribute of type list.Here we say the <b>typecasting
+                    wrt Inheritance</b> is used
+                Operation is the parent class and Division is the child class
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <td>calculations.py</td>
+            <td>Calculations</td>
+            <td>get_first_calculation_result_value()</td>
+            <td>This is a static method calls 1 get_first_calculation_object which get the first element in the history
+                list
+                in this case it is Division. 2, get_output() on the Division object
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">7</th>
+            <td>division.py</td>
+            <td>Division</td>
+            <td>get_output(self)</td>
+            <td>This is a <b>instance method</b> , inherited from the parent class and implemented the abstract method.
+                This denotes the beauty of <b>polymorphism</b> where each Operation subclass(such as Division , Addition
+                etc)
+                have their own implementation. In case of Division , it divides the elements in th tuple.Tuple is the
+                state set the init as explained earlier.
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- Contents End -->
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <!-- Section: Social media -->
+        <div>
+            SuchiKhare &#169
+        </div>
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+            <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/SuchiKhare/calc2/tree/cal2_part5_scratch" class="me-4 text-reset">
+                <i class="fab fa-github"></i>
+            </a>
+
+        </div>
+        <!-- Right -->
+
+        <!-- Section: Social media -->
+    </footer>
+</div>
+</body>
+</html>
