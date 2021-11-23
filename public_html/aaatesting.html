@@ -127,15 +127,15 @@
                                         as simple as checking numeric or string values. Other times, they may require
                                         checking multiple facets of a system. Assertions will ultimately determine if
                                         the test passes or fails.
-                            </li></ul>
-                                    <br>
+                                    </li></ul>
+                                <br>
                                 <ul style="list-style-type:none;"><li>Every major programming language has at least one test framework.
-                                        Frameworks like JUnit, NUnit, Cucumber, and pytest enable you, as the
-                                        programmer,
-                                        to automate tests, execute suites, and report results. However, the framework
-                                        itself doesn’t make a test case “good” or “bad.” You, as the tester, must know
-                                        how to write good tests!
-                                    </li>
+                                    Frameworks like JUnit, NUnit, Cucumber, and pytest enable you, as the
+                                    programmer,
+                                    to automate tests, execute suites, and report results. However, the framework
+                                    itself doesn’t make a test case “good” or “bad.” You, as the tester, must know
+                                    how to write good tests!
+                                </li>
                                 </ul>
 
                             </div>
@@ -166,7 +166,7 @@
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;assert
                                         isinstance(Calculations.get_last_calculation_object(), Addition)
                                     </li></ul>
-                                    <br>
+                                <br>
                                 <ul style="list-style-type:none;">
                                     <li>calculator_test.py method test_add_numbers tests add_numbers method of the
                                         Calculator (calculator.py)
@@ -333,10 +333,10 @@
                                 <p class="grw-font">Example</p>
                                 <ul style="list-style-type:none;">
                                     <li>"""Base class for reading file"""</li></ul>
-                                    <br><ul style="list-style-type:none;">
-                                    <li><b>class ReadFile:</b></li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""Read file"""</li></ul>
-                                    <ul style="list-style-type:none;">
+                                <br><ul style="list-style-type:none;">
+                                <li><b>class ReadFile:</b></li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;"""Read file"""</li></ul>
+                                <ul style="list-style-type:none;">
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;# The __init__ method is a constructor and runs as soon
                                         as an
                                     </li>
@@ -347,47 +347,47 @@
                                         the path"""
                                     </li>
                                     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self._path = path</li>
-                                    </ul><br>
-                                    <br><ul style="list-style-type:none;">
-                                    <li>"""Subclass Class for Reading CSV"""</li>
-                                    <li>import pandas as pd</li>
+                                </ul><br>
+                                <br><ul style="list-style-type:none;">
+                                <li>"""Subclass Class for Reading CSV"""</li>
+                                <li>import pandas as pd</li>
 
-                                    <li>from calc.file_utils.readfile import ReadFile</li>
+                                <li>from calc.file_utils.readfile import ReadFile</li>
 
 
-                                    <li><b>class ReadCSV(ReadFile):</b></li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""subclass extending ReadFile to read csv"""</li>
+                                <li><b>class ReadCSV(ReadFile):</b></li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;"""subclass extending ReadFile to read csv"""</li>
 
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint: disable=too-few-public-methods</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;# This is the instance method</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;def <b>read_csv_file(self):</b></li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""reading csv file"""</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_frame =
-                                        pd.read_csv(self._path)
-                                    </li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("data_frame : ",
-                                        data_frame[:])
-                                    </li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;# pylint: disable=too-few-public-methods</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;# This is the instance method</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;def <b>read_csv_file(self):</b></li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""reading csv file"""</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_frame =
+                                    pd.read_csv(self._path)
+                                </li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("data_frame : ",
+                                    data_frame[:])
+                                </li>
                                 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return True</li></ul>
-                                    <br>
-                                    <br><ul style="list-style-type:none;">
-                                    <li><b>"""Testing of Read CSV"""</b></li>
-                                    <li>import os</li>
+                                <br>
+                                <br><ul style="list-style-type:none;">
+                                <li><b>"""Testing of Read CSV"""</b></li>
+                                <li>import os</li>
                                 <li>import pytest</li></ul>
-                                    <br><ul style="list-style-type:none;">
+                                <br><ul style="list-style-type:none;">
                                 <li>from calc.file_utils.readcsv import ReadCSV</li></ul>
-                                    <br><ul style="list-style-type:none;">
-                                    <li>FIXTURE_DIR = os.path.join(</li>
-                                    <li>
-                                        os.path.dirname(os.path.realpath('C://Users//SuchiK//PycharmProjects//calc2//')),
-                                    </li>
-                                    <li>'calc2//tests//test_data')</li>
-                                    <li><b>@pytest.mark.datafiles(</b></li>
-                                    <li><b>os.path.join(FIXTURE_DIR, 'addition.csv') )</b></li>
-                                    <li>def <b>test_read_csv_file(datafiles):</b></li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;"""test read csv file"""</li>
-                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;assert ReadCSV(datafiles).read_csv_file() is True</li>
-                                </ul>
+                                <br><ul style="list-style-type:none;">
+                                <li>FIXTURE_DIR = os.path.join(</li>
+                                <li>
+                                    os.path.dirname(os.path.realpath('C://Users//SuchiK//PycharmProjects//calc2//')),
+                                </li>
+                                <li>'calc2//tests//test_data')</li>
+                                <li><b>@pytest.mark.datafiles(</b></li>
+                                <li><b>os.path.join(FIXTURE_DIR, 'addition.csv') )</b></li>
+                                <li>def <b>test_read_csv_file(datafiles):</b></li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;"""test read csv file"""</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;assert ReadCSV(datafiles).read_csv_file() is True</li>
+                            </ul>
                             </div>
                         </div>
                     </div>
